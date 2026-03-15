@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Mano Teja Reddy</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Mano Teja Reddy</a>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="experience.html" class="nav-link">Experience</a></li>
+                <li><a href="services.html" class="nav-link">Services</a></li>
+                <li><a href="work.html" class="nav-link">Work</a></li>
+                <li><a href="certifications.html" class="nav-link">Certifications</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Canvas Background -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Futuristic Tech Floating Animation -->
+    <div class="tech-floating-container">
+        <i class="fa-brands fa-js tech-icon"></i>
+        <i class="fa-brands fa-react tech-icon"></i>
+        <i class="fa-brands fa-node-js tech-icon"></i>
+        <i class="fa-brands fa-python tech-icon"></i>
+        <i class="fa-brands fa-html5 tech-icon"></i>
+        <i class="fa-brands fa-css3-alt tech-icon"></i>
+        <i class="fa-brands fa-git-alt tech-icon"></i>
+        <i class="fa-brands fa-java tech-icon"></i>
+    </div>
+
+    <!-- Header Block -->
+    <section class="section-padding" style="padding-top: 150px; padding-bottom: 50px;">
+        <div class="container fade-up">
+            <h1 class="brutal-heading" style="font-size: clamp(2.5rem, 6vw, 4.5rem);">About Me</h1>
+            <div style="margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div>
+                    <h2 class="text-gradient" style="font-size: 2rem; margin-bottom: 1.5rem;">Developer • Entrepreneur •
+                        Innovator</h2>
+                    <p>I am <strong>Mano Teja Reddy</strong>, a passionate developer and aspiring tech entrepreneur from
+                        India. I specialize in building scalable web applications, AI-powered digital platforms, and
+                        complete software ecosystems that solve real-world problems.</p>
+                    <p>My technical journey expanded from core fundamentals like Java and Python into advanced
+                        full-stack web architectures. Today, my primary focus is building my own technology startup,
+                        <span style="color: var(--text-color); font-weight: bold;">TENSPICK</span>, where we engineer
+                        next-generation digital tools and automation systems.
+                    </p>
+                    <p>My approach to technology is clear and concise:<br>
+                        <strong>Build elegant, practical products capable of reaching millions of active users.</strong>
+                    </p>
+                    <p
+                        style="font-style: italic; border-left: 2px solid var(--text-color); padding-left: 1rem; margin-top: 2rem;">
+                        "My core vision is to engineer technology platforms that fundamentally impact human efficiency."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Me Section -->
+    <section class="section-padding">
+        <div class="container rotate-flip-container">
+            <h2 class="section-title-small text-gradient fade-up">Why Work With Me?</h2>
+            <h3 class="fade-up" style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 3rem;">There are thousands of developers out
+                there. Here is why clients choose me.</h3>
+
+            <div class="grid-3">
+                <div class="border-card rotate-flip-anim" onclick="this.classList.add('click-flip-active'); setTimeout(() => this.classList.remove('click-flip-active'), 600)">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.2rem; color: #06b6d4;">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 1rem;">I Respect Deadlines</h4>
+                    <p style="font-size: 1rem;">No ghosting. No excuses. I deliver on time, every time. You get regular
+                        updates and a clear roadmap.</p>
+                </div>
+                <div class="border-card rotate-flip-anim" style="transition-delay: 0.1s;" onclick="this.classList.add('click-flip-active'); setTimeout(() => this.classList.remove('click-flip-active'), 600)">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.2rem; color: #06b6d4;">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 1rem;">I Speak Business</h4>
+                    <p style="font-size: 1rem;">I don't just write code; I build solutions that solve actual business
+                        problems focusing on ROI and scalability.</p>
+                </div>
+                <div class="border-card rotate-flip-anim" style="transition-delay: 0.2s;" onclick="this.classList.add('click-flip-active'); setTimeout(() => this.classList.remove('click-flip-active'), 600)">
+                    <div style="font-size: 2.5rem; margin-bottom: 1.2rem; color: #06b6d4;">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 style="font-size: 1.3rem; margin-bottom: 1rem;">Lightning Fast</h4>
+                    <p style="font-size: 1rem;">My applications are highly optimized. Fast load times mean better SEO
+                        and higher conversion rates for you.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack -->
+    <section class="section-padding bg-alt">
+        <div class="container fade-up">
+            <h2 class="section-title-small">Tech Stack & Expertise</h2>
+            <h3 style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 3rem;">Tools I use to build robust digital
+                solutions.</h3>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+
+                <div class="border-card fade-up">
+                    <h4
+                        style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                        <i class="fa-solid fa-code" style="margin-right: 10px;"></i> Programming Languages
+                    </h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-java"
+                                style="font-size: 1.2rem; color: #f89820;"></i> Java</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-python"
+                                style="font-size: 1.2rem; color: #3776ab;"></i> Python</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-c"
+                                style="font-size: 1.2rem; color: #a8b9cc;"></i> C</span>
+                    </div>
+                </div>
+
+                <div class="border-card fade-up" style="transition-delay: 0.1s;">
+                    <h4
+                        style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                        <i class="fa-solid fa-laptop-code" style="margin-right: 10px;"></i> Frontend Development
+                    </h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-html5"
+                                style="font-size: 1.2rem; color: #e34f26;"></i> HTML</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-css3-alt"
+                                style="font-size: 1.2rem; color: #1572b6;"></i> CSS</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-js"
+                                style="font-size: 1.2rem; color: #f7df1e;"></i> JavaScript</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-react"
+                                style="font-size: 1.2rem; color: #61dafb;"></i> React.js</span>
+                    </div>
+                </div>
+
+                <div class="border-card fade-up" style="transition-delay: 0.2s;">
+                    <h4
+                        style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                        <i class="fa-solid fa-server" style="margin-right: 10px;"></i> Backend Development
+                    </h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-node"
+                                style="font-size: 1.2rem; color: #339933;"></i> Node.js</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-bolt"
+                                style="font-size: 1.2rem; color: #fff;"></i> Express.js</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-network-wired"
+                                style="font-size: 1.2rem; color: #06b6d4;"></i> REST APIs</span>
+                    </div>
+                </div>
+
+                <div class="border-card fade-up" style="transition-delay: 0.3s;">
+                    <h4
+                        style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                        <i class="fa-solid fa-database" style="margin-right: 10px;"></i> Databases
+                    </h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-leaf"
+                                style="font-size: 1.2rem; color: #47a248;"></i> MongoDB</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-database"
+                                style="font-size: 1.2rem; color: #4479a1;"></i> MySQL</span>
+                    </div>
+                </div>
+
+                <div class="border-card fade-up">
+                    <h4
+                        style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                        <i class="fa-solid fa-toolbox" style="margin-right: 10px;"></i> Development Tools
+                    </h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-git-alt"
+                                style="font-size: 1.2rem; color: #f34f29;"></i> Git</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-brands fa-github"
+                                style="font-size: 1.2rem; color: #fff;"></i> GitHub</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-code"
+                                style="font-size: 1.2rem; color: #007acc;"></i> VS Code</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-rocket"
+                                style="font-size: 1.2rem; color: #ff6c37;"></i> Postman</span>
+                    </div>
+                </div>
+
+                <div class="border-card fade-up" style="transition-delay: 0.1s;">
+                    <h4
+                        style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                        <i class="fa-solid fa-globe" style="margin-right: 10px;"></i> Web Technologies
+                    </h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-mobile-screen"
+                                style="font-size: 1.2rem; color: #fff;"></i> Responsive Design</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-plug"
+                                style="font-size: 1.2rem; color: #3b82f6;"></i> API Integration</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-shield-halved"
+                                style="font-size: 1.2rem; color: #10b981;"></i> Auth Systems (JWT)</span>
+                    </div>
+                </div>
+
+                <div class="border-card fade-up" style="transition-delay: 0.2s;">
+                    <h4
+                        style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                        <i class="fa-solid fa-microchip" style="margin-right: 10px;"></i> AI & Emerging Technologies
+                    </h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-brain"
+                                style="font-size: 1.2rem; color: #db2777;"></i> Artificial Intelligence</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-robot"
+                                style="font-size: 1.2rem; color: #9333ea;"></i> Machine Learning</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-wand-magic-sparkles"
+                                style="font-size: 1.2rem; color: #f59e0b;"></i> Generative AI</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-gears"
+                                style="font-size: 1.2rem; color: #64748b;"></i> Automation Systems</span>
+                    </div>
+                </div>
+
+                <div class="border-card fade-up" style="transition-delay: 0.3s;">
+                    <h4
+                        style="font-size: 1.5rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                        <i class="fa-solid fa-star" style="margin-right: 10px;"></i> Other Skills
+                    </h4>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.8rem;">
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-pen-nib"
+                                style="font-size: 1.2rem; color: #ec4899;"></i> UI/UX Thinking</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-cubes"
+                                style="font-size: 1.2rem; color: #8b5cf6;"></i> Product Development</span>
+                        <span
+                            style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 8px 15px; border-radius: 8px; font-size: 0.95rem; display: flex; align-items: center; gap: 8px; transition: transform 0.3s;"
+                            onmouseover="this.style.transform='translateY(-3px)'"
+                            onmouseout="this.style.transform='translateY(0)'"><i class="fa-solid fa-rocket"
+                                style="font-size: 1.2rem; color: #ef4444;"></i> Startup Building</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container rotate-flip-container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="logo">Mano Teja Reddy</span>
+                    <p>Building high-performance, scalable platforms and AI solutions for the modern web.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="experience.html">Experience</a>
+                        <a href="services.html">Services</a>
+                        <a href="work.html">Work</a>
+                        <a href="certifications.html">Certifications</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div class="footer-links">
+                        <a href="https://linkedin.com/in/mano-teja-reddy-" target="_blank"><i
+                                class="fa-brands fa-linkedin" style="margin-right: 8px;"></i> LinkedIn</a>
+                        <a href="https://github.com/Narapu-Reddy-Mano-Teja-Reddy" target="_blank"><i
+                                class="fa-brands fa-github" style="margin-right: 8px;"></i> GitHub</a>
+                        <a href="https://twitter.com/manotejareddy" target="_blank"><i class="fa-brands fa-x-twitter"
+                                style="margin-right: 8px;"></i> Twitter</a>
+                        <a href="mailto:tejanarapureddy2@gmail.com"><i class="fa-regular fa-envelope"
+                                style="margin-right: 8px;"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Mano Teja Reddy. All Rights Reserved.</p>
+                <p>Designed by MANO TEJA REDDY</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // IntersectionObserver for 3D flip-up animations
+        const flipItems = document.querySelectorAll('.rotate-flip-anim');
+        const flipObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+        flipItems.forEach(item => flipObserver.observe(item));
+    </script>
+</body>
+
+</html>
