@@ -10,6 +10,187 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* ─── Mobile-first responsive fixes ─── */
+
+        /* Hero heading: remove nowrap so it wraps on small screens */
+        .brutal-heading {
+            white-space: normal !important;
+            word-break: break-word;
+            font-size: clamp(2rem, 8vw, 8.5vw) !important;
+            letter-spacing: -1px !important;
+        }
+
+        /* Typing cursor line */
+        .typing-text {
+            display: inline-block;
+            max-width: 100%;
+            word-break: break-word;
+        }
+
+        /* Hero content padding on small screens */
+        .hero {
+            padding: 6rem 1rem 3rem;
+        }
+
+        .hero-desc {
+            font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+        }
+
+        /* Grids collapse to single column on mobile */
+        .grid-3,
+        .grid-2 {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        /* Services row inside grid-2 */
+        .grid-2 > div:last-child {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        /* Journey / CTA row */
+        .journey-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        /* Footer grid */
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 2rem;
+        }
+
+        /* ─── Hamburger nav (mobile) ─── */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 5px;
+            padding: 4px;
+            z-index: 1001;
+        }
+
+        .bar {
+            width: 25px;
+            height: 3px;
+            background: var(--text-color, #fff);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            display: block;
+        }
+
+        /* Animated X when open */
+        .hamburger.active .bar:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+        .hamburger.active .bar:nth-child(2) {
+            opacity: 0;
+        }
+        .hamburger.active .bar:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        /* ─── Breakpoints ─── */
+        @media (max-width: 900px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            /* Show hamburger */
+            .hamburger {
+                display: flex;
+            }
+
+            /* Hide nav links by default on mobile */
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background: var(--bg-color, #0a0a0a);
+                justify-content: center;
+                align-items: center;
+                gap: 2rem;
+                z-index: 1000;
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .nav-menu.open {
+                display: flex;
+            }
+
+            .nav-menu li a {
+                font-size: 1.4rem;
+            }
+
+            /* Single column everything */
+            .grid-3,
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+
+            /* Hero subtitle scale */
+            .hero-subtitle {
+                font-size: clamp(1rem, 4vw, 1.4rem) !important;
+            }
+
+            /* Hero actions stacked */
+            .hero-actions {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: flex-start;
+            }
+
+            /* Journey CTA section */
+            .journey-row {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            /* Section padding reduce */
+            .section-padding {
+                padding: 3rem 1rem;
+            }
+
+            /* Footer bottom text stacked */
+            .footer-bottom {
+                flex-direction: column;
+                gap: 0.5rem;
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -17,7 +198,7 @@
     <nav id="navbar" class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">Mano Teja Reddy</a>
-            <div class="hamburger" id="hamburger">
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -41,11 +222,12 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <span class="hero-subtitle fade-up" style="font-size: clamp(1.2rem, 2.5vw, 2rem); color: var(--text-color); font-weight: bold;">Full Stack Developer & AI Enthusiast</span>
+                <span class="hero-subtitle fade-up" style="font-size: clamp(1rem, 3vw, 2rem); color: var(--text-color); font-weight: bold;">Full Stack Developer &amp; AI Enthusiast</span>
                 <h1 class="brutal-heading fade-up"
-style="line-height:1.1;font-size:clamp(2rem,8vw,5rem);white-space:normal;word-break:break-word;margin-top:1rem;letter-spacing:-1px;"                    <span class="text-gradient">I AM MANO TEJA REDDY</span><br>
+                    style="line-height: 1.15; margin-top: 1rem;">
+                    <span class="text-gradient">I AM MANO TEJA REDDY</span><br>
                     <span class="typing-text"
-                        style="color: var(--text-color); border-right: 4px solid var(--text-color); padding-right: 5px; display: inline-block;"></span>
+                        style="color: var(--text-color); border-right: 4px solid var(--text-color); padding-right: 5px;"></span>
                 </h1>
                 <p class="hero-desc fade-up">
                     I build fast, scalable web apps and startup platforms — focusing on robust architecture and modern
@@ -62,7 +244,7 @@ style="line-height:1.1;font-size:clamp(2rem,8vw,5rem);white-space:normal;word-br
     <!-- Featured Work Snippet -->
     <section class="section-padding">
         <div class="container">
-            <h2 class="section-title-small fade-up text-gradient"> Featured Work</h2>
+            <h2 class="section-title-small fade-up text-gradient">Featured Work</h2>
             <div class="grid-3">
                 <!-- Project 1 -->
                 <div class="border-card fade-up">
@@ -100,10 +282,10 @@ style="line-height:1.1;font-size:clamp(2rem,8vw,5rem);white-space:normal;word-br
     <!-- Quick Services Snippet -->
     <section class="section-padding bg-alt">
         <div class="container fade-up">
-            <h2 class="section-title-small"> Services & Expertise</h2>
+            <h2 class="section-title-small">Services &amp; Expertise</h2>
             <div class="grid-2">
                 <div>
-                    <h3 style="font-size: clamp(2rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">Delivering End-to-End
+                    <h3 style="font-size: clamp(1.5rem, 3vw, 2.5rem); margin-bottom: 1.5rem;">Delivering End-to-End
                         Solutions</h3>
                     <p>I don't just write code; I build complete digital ecosystems. From responsive frontend design to
                         intelligent backend automation.</p>
@@ -116,7 +298,7 @@ style="line-height:1.1;font-size:clamp(2rem,8vw,5rem);white-space:normal;word-br
                     </a>
                     <a href="services.html" class="border-card link-hover"
                         style="padding: 1.5rem; text-decoration: none; transition-delay: 0.1s;">
-                        <h4 style="font-size: 1.2rem; color: var(--text-color);">AI & Automation <i
+                        <h4 style="font-size: 1.2rem; color: var(--text-color);">AI &amp; Automation <i
                                 class="fa-solid fa-arrow-right" style="margin-left: 10px; font-size: 0.9rem;"></i></h4>
                     </a>
                     <a href="services.html" class="border-card link-hover"
@@ -134,7 +316,7 @@ style="line-height:1.1;font-size:clamp(2rem,8vw,5rem);white-space:normal;word-br
         <div class="container fade-up" style="text-align: center;">
             <i class="fa-solid fa-certificate"
                 style="font-size: 3rem; color: var(--text-muted); margin-bottom: 1.5rem;"></i>
-            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;">Certified Expertise</h2>
+            <h2 style="font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 1rem;">Certified Expertise</h2>
             <p style="max-width: 600px; margin: 0 auto 2rem;">Holding 9+ professional certifications including Infosys
                 Springboard Data Science, Microsoft Networking, and NSDC Generative AI.</p>
             <a href="certifications.html" class="btn btn-primary">View All Credentials</a>
@@ -143,10 +325,9 @@ style="line-height:1.1;font-size:clamp(2rem,8vw,5rem);white-space:normal;word-br
 
     <!-- Journey Hook -->
     <section class="section-padding bg-alt">
-        <div class="container border-card fade-up"
-            style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+        <div class="container border-card fade-up journey-row">
             <div>
-                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem;"><span class="text-gradient">Always
+                <h2 style="font-size: clamp(1.8rem, 4vw, 3rem); margin-bottom: 1rem;"><span class="text-gradient">Always
                         Climbing To New Heights</span></h2>
                 <p style="max-width: 600px; margin-bottom: 0;">Every challenge drives growth. Whether architecting
                     platforms or building AI pipelines, I embrace continuous learning.</p>
@@ -190,7 +371,7 @@ style="line-height:1.1;font-size:clamp(2rem,8vw,5rem);white-space:normal;word-br
             </div>
             <div class="footer-bottom">
                 <p>© 2026 Mano Teja Reddy. All Rights Reserved.</p>
-                <p>Designed by MANO TEJA REDDY </p>
+                <p>Designed by MANO TEJA REDDY</p>
             </div>
         </div>
     </footer>
@@ -198,6 +379,47 @@ style="line-height:1.1;font-size:clamp(2rem,8vw,5rem);white-space:normal;word-br
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // ─── Mobile hamburger menu toggle ───
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        function toggleMenu() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+            // Prevent body scroll when menu is open
+            document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+        }
+
+        hamburger.addEventListener('click', toggleMenu);
+
+        // Keyboard accessibility
+        hamburger.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                toggleMenu();
+            }
+        });
+
+        // Close menu when a nav link is clicked
+        navMenu.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu on resize back to desktop
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 600) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
 
 </html>
