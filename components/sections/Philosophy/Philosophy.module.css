@@ -1,0 +1,86 @@
+.philosophy {
+  padding: 120px 24px;
+  background: var(--bg, #fff);
+  color: var(--ink, #141414);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  display: inline-block;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent, #ff2e0f);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+.tellugu {
+  font-family: var(--font-serif), Georgia, serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+  line-height: 1.1;
+}
+
+.english {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: var(--ink-3, #8a8a90);
+  text-transform: uppercase;
+  margin-bottom: 36px;
+}
+
+.lines {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--ink-2, #3c3c42);
+}
+
+.line {
+  margin-bottom: 12px;
+}
+
+.bullets {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 28px;
+  font-weight: 600;
+  color: var(--ink, #141414);
+}
+
+.bullets span {
+  position: relative;
+}
+
+.bullets span:not(:last-child)::after {
+  content: "•";
+  position: absolute;
+  right: -15px;
+  color: var(--accent, #ff2e0f);
+}
+
+@media (max-width: 600px) {
+  .philosophy {
+    padding: 80px 20px;
+  }
+  .bullets {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .bullets span::after {
+    display: none;
+  }
+}

@@ -1,0 +1,277 @@
+/* ============ ABOUT — storytelling section ============ */
+
+.about {
+  position: relative;
+  background: #fff;
+}
+
+.wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 120px 44px 130px;
+}
+
+/* ---------- header ---------- */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 26px;
+}
+.eyebrow span {
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+.eyebrow::after {
+  content: "";
+  flex: 0 0 34px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.h2 {
+  font-weight: 900;
+  font-size: clamp(36px, 4.6vw, 62px);
+  letter-spacing: -0.03em;
+  line-height: 1.02;
+}
+.serif {
+  font-family: var(--font-serif), Georgia, serif;
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+/* ---------- value cards ---------- */
+.valueCards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.valueCard {
+  background: #0d0d12;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 34px 30px;
+  color: #fff;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valueCard::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), #ff6a00);
+}
+
+.valueCard:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 46, 15, 0.5);
+  box-shadow: 0 20px 48px rgba(255, 46, 15, 0.15);
+}
+
+.valueCardBadge {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.valueCardTitle {
+  font-size: clamp(19px, 1.8vw, 24px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  margin-bottom: 14px;
+}
+
+.valueCardDesc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* ---------- grid: beats + side cards ---------- */
+.grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 72px;
+  margin-top: 64px;
+}
+
+.beats {
+  display: flex;
+  flex-direction: column;
+  gap: 44px;
+}
+.beat {
+  display: flex;
+  gap: 22px;
+}
+.beatN {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--accent);
+  padding-top: 7px;
+  min-width: 26px;
+}
+.beat h3 {
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 10px;
+}
+.beat p {
+  font-size: 19px;
+  line-height: 1.6;
+  color: var(--ink);
+  max-width: 560px;
+}
+.beat p b {
+  font-weight: 700;
+}
+
+.sideCol {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.sideCard {
+  background: #fff;
+  border-radius: var(--radius);
+  border: 1px solid rgba(20, 20, 20, 0.04);
+  box-shadow: var(--shadow);
+  will-change: transform;
+}
+.imgCard {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ph);
+  color: var(--ink-3);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  transform: rotate(2deg);
+}
+.philoCard {
+  padding: 32px 34px;
+  transform: rotate(-1.5deg);
+}
+.philoCard h4 {
+  font-family: var(--font-script), cursive;
+  font-size: 25px;
+  font-weight: 700;
+  color: var(--ink-2);
+  margin-bottom: 12px;
+}
+.philoCard ul {
+  list-style: none;
+}
+.philoCard li {
+  display: flex;
+  gap: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 11px 0;
+  border-bottom: 1px solid #f3f3f4;
+}
+.philoCard li:last-child {
+  border: none;
+}
+.philoCard li span {
+  color: var(--accent);
+}
+
+/* ---------- metrics band ---------- */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+  margin-top: 84px;
+}
+.metric {
+  border-top: 2px solid var(--ink);
+  padding-top: 20px;
+}
+.metricNum {
+  display: flex;
+  align-items: baseline;
+  font-size: clamp(34px, 3.6vw, 50px);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.metricNum i {
+  font-style: normal;
+  color: var(--accent);
+}
+.metricStatic {
+  font-weight: 900;
+}
+.metricLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-3);
+  margin-top: 10px;
+  line-height: 1.45;
+  max-width: 220px;
+}
+
+/* ---------- education + next ---------- */
+.edu {
+  margin-top: 56px;
+  font-size: 14.5px;
+  color: var(--ink-2);
+}
+.edu b {
+  color: var(--ink);
+}
+.next {
+  margin-top: 34px;
+}
+
+/* ============ Responsive ============ */
+@media (max-width: 1100px) {
+  .wrap {
+    padding: 90px 24px 100px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 34px 24px;
+    margin-top: 64px;
+  }
+}
+
+@media (max-width: 560px) {
+  .beat p {
+    font-size: 17px;
+  }
+  .metrics {
+    grid-template-columns: 1fr 1fr;
+  }
+}
